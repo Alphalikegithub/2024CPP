@@ -39,19 +39,23 @@ int main(int argc,char **argv){
         return -1;
     }
     //4.accept 阻塞等待客户端的连接
-#if 0
+#if 1
     struct sockaddr_in caddr;
     memset(&caddr,0,sizeof(caddr));
     caddr.sin_family = AF_INET;
     socklen_t length = sizeof(caddr);
-    accept(listenfd,(struct sockaddr*)&caddr,&length);
+    int cfd = accept(listenfd,(struct sockaddr*)&caddr,&length);
 #endif
-    int cfd = accept(listenfd,nullptr,nullptr);
+    //int cfd = accept(listenfd,nullptr,nullptr);
     if(cfd < 0){
         perror("accept\n");
         close(listenfd);
         return -1;
     }
+    char ip[32];
+    cout << "客户端地址" << inet_ntop(AF_INET,&caddr.sin_addr.s_addr,ip,sizeof(ip)) 
+         << "客户端端口号" << ntohs(caddr.sin_port) << endl;
+
     //5.进行通信 read/write 或者recv/send
     while(1){
         char buf[128] = {};
@@ -60,6 +64,8 @@ int main(int argc,char **argv){
             cout << "服务器接收数据失败" << endl;
         }else if(0 == len){
             cout << "len == 0" << endl;
+            cout << "客户端断开了连接" << endl;
+            break;
         }else{
             cout << "recv message from client:" << buf << endl;
         }

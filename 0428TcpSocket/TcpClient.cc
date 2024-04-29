@@ -53,6 +53,8 @@ int main(int argc,char **argv){
             cout << "客户端接收数据失败" << endl;
         }else if(0 == len){
             cout << "len == 0" << endl;
+            cout << "服务器断开了连接" << endl;
+            break;
         }else{
             cout << "recv message from sever:" << buf << endl;
         }
