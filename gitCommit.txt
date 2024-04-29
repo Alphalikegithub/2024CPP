@@ -1,2 +1,3 @@
-git config user.name "Alphalikegitee"
-git config user.email "qbz3725460829@163.com"
+git config user.email 2908926129@qq.com
+
+git config user.name "Alphalikegithub"
