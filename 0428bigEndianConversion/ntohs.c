@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <arpa/inet.h>
-
+//新增修改测试
 int main(){
     unsigned short s = 0x1234;
     printf("s = %x\n",s);
