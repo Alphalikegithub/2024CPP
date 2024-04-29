@@ -1,0 +1,2 @@
+git config user.name "Alphalikegitee"
+git config user.email "qbz3725460829@163.com"
