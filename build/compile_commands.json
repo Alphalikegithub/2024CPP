@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/root/code/2024CPP/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/test.dir/main.cpp.o -c /root/code/2024CPP/0501Protobuf/test/main.cpp",
+  "file": "/root/code/2024CPP/0501Protobuf/test/main.cpp"
+},
+{
+  "directory": "/root/code/2024CPP/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/test.dir/MyTest.cpp.o -c /root/code/2024CPP/0501Protobuf/test/MyTest.cpp",
+  "file": "/root/code/2024CPP/0501Protobuf/test/MyTest.cpp"
+},
+{
+  "directory": "/root/code/2024CPP/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/test.dir/Person.pb.cc.o -c /root/code/2024CPP/0501Protobuf/test/Person.pb.cc",
+  "file": "/root/code/2024CPP/0501Protobuf/test/Person.pb.cc"
+}
+]
