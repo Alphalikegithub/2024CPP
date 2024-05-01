@@ -1,4 +1,6 @@
 syntax = "proto3";
+//和其他的proto文件产生关联
+import "Address.proto";
 
 //定义一个颜色相关的枚举
 enum Color{
@@ -8,11 +10,7 @@ enum Color{
     Blue = 9;
 }
 
-message Address
-{
-    int32 num = 1;
-    bytes addr = 2;
-}
+
 message Person
 {
     int32 id = 1;
