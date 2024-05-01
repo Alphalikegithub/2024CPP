@@ -1,13 +1,17 @@
-FILE(REMOVE_RECURSE
-  "CMakeFiles/test.dir/main.cpp.o"
-  "CMakeFiles/test.dir/MyTest.cpp.o"
-  "CMakeFiles/test.dir/Person.pb.cc.o"
+file(REMOVE_RECURSE
   "CMakeFiles/test.dir/Address.pb.cc.o"
-  "libtest.pdb"
+  "CMakeFiles/test.dir/Address.pb.cc.o.d"
+  "CMakeFiles/test.dir/MyTest.cpp.o"
+  "CMakeFiles/test.dir/MyTest.cpp.o.d"
+  "CMakeFiles/test.dir/Person.pb.cc.o"
+  "CMakeFiles/test.dir/Person.pb.cc.o.d"
+  "CMakeFiles/test.dir/main.cpp.o"
+  "CMakeFiles/test.dir/main.cpp.o.d"
   "libtest.a"
+  "libtest.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
-FOREACH(lang CXX)
-  INCLUDE(CMakeFiles/test.dir/cmake_clean_${lang}.cmake OPTIONAL)
-ENDFOREACH(lang)
+foreach(lang CXX)
+  include(CMakeFiles/test.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
