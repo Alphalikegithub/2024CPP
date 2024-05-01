@@ -121,11 +121,35 @@ CMakeFiles/test.dir/Person.pb.cc.o.provides: CMakeFiles/test.dir/Person.pb.cc.o.
 
 CMakeFiles/test.dir/Person.pb.cc.o.provides.build: CMakeFiles/test.dir/Person.pb.cc.o
 
+CMakeFiles/test.dir/Address.pb.cc.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/Address.pb.cc.o: /root/code/2024CPP/0501Protobuf/test/Address.pb.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/code/2024CPP/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/test.dir/Address.pb.cc.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/test.dir/Address.pb.cc.o -c /root/code/2024CPP/0501Protobuf/test/Address.pb.cc
+
+CMakeFiles/test.dir/Address.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/Address.pb.cc.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/code/2024CPP/0501Protobuf/test/Address.pb.cc > CMakeFiles/test.dir/Address.pb.cc.i
+
+CMakeFiles/test.dir/Address.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/Address.pb.cc.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/code/2024CPP/0501Protobuf/test/Address.pb.cc -o CMakeFiles/test.dir/Address.pb.cc.s
+
+CMakeFiles/test.dir/Address.pb.cc.o.requires:
+.PHONY : CMakeFiles/test.dir/Address.pb.cc.o.requires
+
+CMakeFiles/test.dir/Address.pb.cc.o.provides: CMakeFiles/test.dir/Address.pb.cc.o.requires
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Address.pb.cc.o.provides.build
+.PHONY : CMakeFiles/test.dir/Address.pb.cc.o.provides
+
+CMakeFiles/test.dir/Address.pb.cc.o.provides.build: CMakeFiles/test.dir/Address.pb.cc.o
+
 # Object files for target test
 test_OBJECTS = \
 "CMakeFiles/test.dir/main.cpp.o" \
 "CMakeFiles/test.dir/MyTest.cpp.o" \
-"CMakeFiles/test.dir/Person.pb.cc.o"
+"CMakeFiles/test.dir/Person.pb.cc.o" \
+"CMakeFiles/test.dir/Address.pb.cc.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
@@ -133,6 +157,7 @@ test_EXTERNAL_OBJECTS =
 libtest.a: CMakeFiles/test.dir/main.cpp.o
 libtest.a: CMakeFiles/test.dir/MyTest.cpp.o
 libtest.a: CMakeFiles/test.dir/Person.pb.cc.o
+libtest.a: CMakeFiles/test.dir/Address.pb.cc.o
 libtest.a: CMakeFiles/test.dir/build.make
 libtest.a: CMakeFiles/test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libtest.a"
@@ -146,6 +171,7 @@ CMakeFiles/test.dir/build: libtest.a
 CMakeFiles/test.dir/requires: CMakeFiles/test.dir/main.cpp.o.requires
 CMakeFiles/test.dir/requires: CMakeFiles/test.dir/MyTest.cpp.o.requires
 CMakeFiles/test.dir/requires: CMakeFiles/test.dir/Person.pb.cc.o.requires
+CMakeFiles/test.dir/requires: CMakeFiles/test.dir/Address.pb.cc.o.requires
 .PHONY : CMakeFiles/test.dir/requires
 
 CMakeFiles/test.dir/clean:

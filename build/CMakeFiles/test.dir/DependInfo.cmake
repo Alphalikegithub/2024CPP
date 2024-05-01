@@ -4,6 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
+  "/root/code/2024CPP/0501Protobuf/test/Address.pb.cc" "/root/code/2024CPP/build/CMakeFiles/test.dir/Address.pb.cc.o"
   "/root/code/2024CPP/0501Protobuf/test/MyTest.cpp" "/root/code/2024CPP/build/CMakeFiles/test.dir/MyTest.cpp.o"
   "/root/code/2024CPP/0501Protobuf/test/Person.pb.cc" "/root/code/2024CPP/build/CMakeFiles/test.dir/Person.pb.cc.o"
   "/root/code/2024CPP/0501Protobuf/test/main.cpp" "/root/code/2024CPP/build/CMakeFiles/test.dir/main.cpp.o"

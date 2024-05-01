@@ -20,6 +20,7 @@ PROTOBUF_PRAGMA_INIT_SEG
 namespace _pb = ::PROTOBUF_NAMESPACE_ID;
 namespace _pbi = _pb::internal;
 
+namespace Joker {
 PROTOBUF_CONSTEXPR Address::Address(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.addr_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
@@ -34,35 +35,36 @@ struct AddressDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 AddressDefaultTypeInternal _Address_default_instance_;
+}  // namespace Joker
 static ::_pb::Metadata file_level_metadata_Address_2eproto[1];
 static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_Address_2eproto = nullptr;
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_Address_2eproto = nullptr;
 
 const uint32_t TableStruct_Address_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::Address, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::Joker::Address, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::Address, _impl_.num_),
-  PROTOBUF_FIELD_OFFSET(::Address, _impl_.addr_),
+  PROTOBUF_FIELD_OFFSET(::Joker::Address, _impl_.num_),
+  PROTOBUF_FIELD_OFFSET(::Joker::Address, _impl_.addr_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::Address)},
+  { 0, -1, -1, sizeof(::Joker::Address)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-  &::_Address_default_instance_._instance,
+  &::Joker::_Address_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_Address_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\rAddress.proto\"$\n\007Address\022\013\n\003num\030\001 \001(\005\022"
-  "\014\n\004addr\030\002 \001(\014b\006proto3"
+  "\n\rAddress.proto\022\005Joker\"$\n\007Address\022\013\n\003num"
+  "\030\001 \001(\005\022\014\n\004addr\030\002 \001(\014b\006proto3"
   ;
 static ::_pbi::once_flag descriptor_table_Address_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Address_2eproto = {
-    false, false, 61, descriptor_table_protodef_Address_2eproto,
+    false, false, 68, descriptor_table_protodef_Address_2eproto,
     "Address.proto",
     &descriptor_table_Address_2eproto_once, nullptr, 0, 1,
     schemas, file_default_instances, TableStruct_Address_2eproto::offsets,
@@ -75,6 +77,7 @@ PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_Address_
 
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_Address_2eproto(&descriptor_table_Address_2eproto);
+namespace Joker {
 
 // ===================================================================
 
@@ -86,7 +89,7 @@ Address::Address(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:Address)
+  // @@protoc_insertion_point(arena_constructor:Joker.Address)
 }
 Address::Address(const Address& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -106,7 +109,7 @@ Address::Address(const Address& from)
       _this->GetArenaForAllocation());
   }
   _this->_impl_.num_ = from._impl_.num_;
-  // @@protoc_insertion_point(copy_constructor:Address)
+  // @@protoc_insertion_point(copy_constructor:Joker.Address)
 }
 
 inline void Address::SharedCtor(
@@ -125,7 +128,7 @@ inline void Address::SharedCtor(
 }
 
 Address::~Address() {
-  // @@protoc_insertion_point(destructor:Address)
+  // @@protoc_insertion_point(destructor:Joker.Address)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -143,7 +146,7 @@ void Address::SetCachedSize(int size) const {
 }
 
 void Address::Clear() {
-// @@protoc_insertion_point(message_clear_start:Address)
+// @@protoc_insertion_point(message_clear_start:Joker.Address)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -201,7 +204,7 @@ failure:
 
 uint8_t* Address::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:Address)
+  // @@protoc_insertion_point(serialize_to_array_start:Joker.Address)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -221,12 +224,12 @@ uint8_t* Address::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:Address)
+  // @@protoc_insertion_point(serialize_to_array_end:Joker.Address)
   return target;
 }
 
 size_t Address::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Address)
+// @@protoc_insertion_point(message_byte_size_start:Joker.Address)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -258,7 +261,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Address::GetClassData() const 
 void Address::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<Address*>(&to_msg);
   auto& from = static_cast<const Address&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:Address)
+  // @@protoc_insertion_point(class_specific_merge_from_start:Joker.Address)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -273,7 +276,7 @@ void Address::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOB
 }
 
 void Address::CopyFrom(const Address& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Address)
+// @@protoc_insertion_point(class_specific_copy_from_start:Joker.Address)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -302,10 +305,11 @@ void Address::InternalSwap(Address* other) {
 }
 
 // @@protoc_insertion_point(namespace_scope)
+}  // namespace Joker
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::Address*
-Arena::CreateMaybeMessage< ::Address >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::Address >(arena);
+template<> PROTOBUF_NOINLINE ::Joker::Address*
+Arena::CreateMaybeMessage< ::Joker::Address >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::Joker::Address >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

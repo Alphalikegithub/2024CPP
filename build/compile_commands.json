@@ -13,5 +13,10 @@
   "directory": "/root/code/2024CPP/build",
   "command": "/usr/bin/g++    -g   -o CMakeFiles/test.dir/Person.pb.cc.o -c /root/code/2024CPP/0501Protobuf/test/Person.pb.cc",
   "file": "/root/code/2024CPP/0501Protobuf/test/Person.pb.cc"
+},
+{
+  "directory": "/root/code/2024CPP/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/test.dir/Address.pb.cc.o -c /root/code/2024CPP/0501Protobuf/test/Address.pb.cc",
+  "file": "/root/code/2024CPP/0501Protobuf/test/Address.pb.cc"
 }
 ]

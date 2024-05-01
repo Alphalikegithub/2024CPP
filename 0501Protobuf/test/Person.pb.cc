@@ -20,6 +20,7 @@ PROTOBUF_PRAGMA_INIT_SEG
 namespace _pb = ::PROTOBUF_NAMESPACE_ID;
 namespace _pbi = _pb::internal;
 
+namespace SmallJoker {
 PROTOBUF_CONSTEXPR Person::Person(
     ::_pbi::ConstantInitialized): _impl_{
     /*decltype(_impl_.name_)*/{}
@@ -38,45 +39,47 @@ struct PersonDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PersonDefaultTypeInternal _Person_default_instance_;
+}  // namespace SmallJoker
 static ::_pb::Metadata file_level_metadata_Person_2eproto[1];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_Person_2eproto[1];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_Person_2eproto = nullptr;
 
 const uint32_t TableStruct_Person_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::Person, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::SmallJoker::Person, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::Person, _impl_.id_),
-  PROTOBUF_FIELD_OFFSET(::Person, _impl_.name_),
-  PROTOBUF_FIELD_OFFSET(::Person, _impl_.sex_),
-  PROTOBUF_FIELD_OFFSET(::Person, _impl_.age_),
-  PROTOBUF_FIELD_OFFSET(::Person, _impl_.addr_),
-  PROTOBUF_FIELD_OFFSET(::Person, _impl_.color_),
+  PROTOBUF_FIELD_OFFSET(::SmallJoker::Person, _impl_.id_),
+  PROTOBUF_FIELD_OFFSET(::SmallJoker::Person, _impl_.name_),
+  PROTOBUF_FIELD_OFFSET(::SmallJoker::Person, _impl_.sex_),
+  PROTOBUF_FIELD_OFFSET(::SmallJoker::Person, _impl_.age_),
+  PROTOBUF_FIELD_OFFSET(::SmallJoker::Person, _impl_.addr_),
+  PROTOBUF_FIELD_OFFSET(::SmallJoker::Person, _impl_.color_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::Person)},
+  { 0, -1, -1, sizeof(::SmallJoker::Person)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-  &::_Person_default_instance_._instance,
+  &::SmallJoker::_Person_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_Person_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\014Person.proto\032\rAddress.proto\"k\n\006Person\022"
-  "\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \003(\014\022\013\n\003sex\030\003 \001(\014\022\013"
-  "\n\003age\030\004 \001(\005\022\026\n\004addr\030\005 \001(\0132\010.Address\022\025\n\005c"
-  "olor\030\006 \001(\0162\006.Color*1\n\005Color\022\007\n\003Red\020\000\022\t\n\005"
-  "Green\020\005\022\n\n\006Yellow\020\006\022\010\n\004Blue\020\tb\006proto3"
+  "\n\014Person.proto\022\nSmallJoker\032\rAddress.prot"
+  "o\"|\n\006Person\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \003(\014\022\013\n"
+  "\003sex\030\003 \001(\014\022\013\n\003age\030\004 \001(\005\022\034\n\004addr\030\005 \001(\0132\016."
+  "Joker.Address\022 \n\005color\030\006 \001(\0162\021.SmallJoke"
+  "r.Color*1\n\005Color\022\007\n\003Red\020\000\022\t\n\005Green\020\005\022\n\n\006"
+  "Yellow\020\006\022\010\n\004Blue\020\tb\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_Person_2eproto_deps[1] = {
   &::descriptor_table_Address_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_Person_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_Person_2eproto = {
-    false, false, 197, descriptor_table_protodef_Person_2eproto,
+    false, false, 226, descriptor_table_protodef_Person_2eproto,
     "Person.proto",
     &descriptor_table_Person_2eproto_once, descriptor_table_Person_2eproto_deps, 1, 1,
     schemas, file_default_instances, TableStruct_Person_2eproto::offsets,
@@ -89,6 +92,7 @@ PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_Person_2
 
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_Person_2eproto(&descriptor_table_Person_2eproto);
+namespace SmallJoker {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Color_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_Person_2eproto);
   return file_level_enum_descriptors_Person_2eproto[0];
@@ -110,10 +114,10 @@ bool Color_IsValid(int value) {
 
 class Person::_Internal {
  public:
-  static const ::Address& addr(const Person* msg);
+  static const ::Joker::Address& addr(const Person* msg);
 };
 
-const ::Address&
+const ::Joker::Address&
 Person::_Internal::addr(const Person* msg) {
   return *msg->_impl_.addr_;
 }
@@ -127,7 +131,7 @@ Person::Person(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor(arena, is_message_owned);
-  // @@protoc_insertion_point(arena_constructor:Person)
+  // @@protoc_insertion_point(arena_constructor:SmallJoker.Person)
 }
 Person::Person(const Person& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -151,12 +155,12 @@ Person::Person(const Person& from)
       _this->GetArenaForAllocation());
   }
   if (from._internal_has_addr()) {
-    _this->_impl_.addr_ = new ::Address(*from._impl_.addr_);
+    _this->_impl_.addr_ = new ::Joker::Address(*from._impl_.addr_);
   }
   ::memcpy(&_impl_.id_, &from._impl_.id_,
     static_cast<size_t>(reinterpret_cast<char*>(&_impl_.color_) -
     reinterpret_cast<char*>(&_impl_.id_)) + sizeof(_impl_.color_));
-  // @@protoc_insertion_point(copy_constructor:Person)
+  // @@protoc_insertion_point(copy_constructor:SmallJoker.Person)
 }
 
 inline void Person::SharedCtor(
@@ -179,7 +183,7 @@ inline void Person::SharedCtor(
 }
 
 Person::~Person() {
-  // @@protoc_insertion_point(destructor:Person)
+  // @@protoc_insertion_point(destructor:SmallJoker.Person)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -199,7 +203,7 @@ void Person::SetCachedSize(int size) const {
 }
 
 void Person::Clear() {
-// @@protoc_insertion_point(message_clear_start:Person)
+// @@protoc_insertion_point(message_clear_start:SmallJoker.Person)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -261,7 +265,7 @@ const char* Person::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
         } else
           goto handle_unusual;
         continue;
-      // .Address addr = 5;
+      // .Joker.Address addr = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_addr(), ptr);
@@ -269,12 +273,12 @@ const char* Person::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
         } else
           goto handle_unusual;
         continue;
-      // .Color color = 6;
+      // .SmallJoker.Color color = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_color(static_cast<::Color>(val));
+          _internal_set_color(static_cast<::SmallJoker::Color>(val));
         } else
           goto handle_unusual;
         continue;
@@ -303,7 +307,7 @@ failure:
 
 uint8_t* Person::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:Person)
+  // @@protoc_insertion_point(serialize_to_array_start:SmallJoker.Person)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -331,14 +335,14 @@ uint8_t* Person::_InternalSerialize(
     target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_age(), target);
   }
 
-  // .Address addr = 5;
+  // .Joker.Address addr = 5;
   if (this->_internal_has_addr()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::addr(this),
         _Internal::addr(this).GetCachedSize(), target, stream);
   }
 
-  // .Color color = 6;
+  // .SmallJoker.Color color = 6;
   if (this->_internal_color() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
@@ -349,12 +353,12 @@ uint8_t* Person::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:Person)
+  // @@protoc_insertion_point(serialize_to_array_end:SmallJoker.Person)
   return target;
 }
 
 size_t Person::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Person)
+// @@protoc_insertion_point(message_byte_size_start:SmallJoker.Person)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -376,7 +380,7 @@ size_t Person::ByteSizeLong() const {
         this->_internal_sex());
   }
 
-  // .Address addr = 5;
+  // .Joker.Address addr = 5;
   if (this->_internal_has_addr()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -393,7 +397,7 @@ size_t Person::ByteSizeLong() const {
     total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_age());
   }
 
-  // .Color color = 6;
+  // .SmallJoker.Color color = 6;
   if (this->_internal_color() != 0) {
     total_size += 1 +
       ::_pbi::WireFormatLite::EnumSize(this->_internal_color());
@@ -412,7 +416,7 @@ const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*Person::GetClassData() const {
 void Person::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
   auto* const _this = static_cast<Person*>(&to_msg);
   auto& from = static_cast<const Person&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:Person)
+  // @@protoc_insertion_point(class_specific_merge_from_start:SmallJoker.Person)
   GOOGLE_DCHECK_NE(&from, _this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -422,7 +426,7 @@ void Person::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBU
     _this->_internal_set_sex(from._internal_sex());
   }
   if (from._internal_has_addr()) {
-    _this->_internal_mutable_addr()->::Address::MergeFrom(
+    _this->_internal_mutable_addr()->::Joker::Address::MergeFrom(
         from._internal_addr());
   }
   if (from._internal_id() != 0) {
@@ -438,7 +442,7 @@ void Person::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBU
 }
 
 void Person::CopyFrom(const Person& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Person)
+// @@protoc_insertion_point(class_specific_copy_from_start:SmallJoker.Person)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -473,10 +477,11 @@ void Person::InternalSwap(Person* other) {
 }
 
 // @@protoc_insertion_point(namespace_scope)
+}  // namespace SmallJoker
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::Person*
-Arena::CreateMaybeMessage< ::Person >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::Person >(arena);
+template<> PROTOBUF_NOINLINE ::SmallJoker::Person*
+Arena::CreateMaybeMessage< ::SmallJoker::Person >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::SmallJoker::Person >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

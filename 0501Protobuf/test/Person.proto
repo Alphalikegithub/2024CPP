@@ -1,6 +1,7 @@
 syntax = "proto3";
 //和其他的proto文件产生关联
 import "Address.proto";
+package SmallJoker;
 
 //定义一个颜色相关的枚举
 enum Color{
@@ -17,6 +18,6 @@ message Person
     repeated bytes name = 2;
     bytes sex = 3;
     int32 age = 4;
-    Address addr = 5;
+    Joker.Address addr = 5;
     Color color = 6;
 }

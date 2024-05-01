@@ -1,6 +1,9 @@
 #include "MyTest.h"
 #include "Person.pb.h"
 
+using namespace Joker;
+using namespace SmallJoker;
+
 void MyTest::test(){
     //序列化
     Person p;

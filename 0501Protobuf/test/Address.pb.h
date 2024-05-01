@@ -44,17 +44,20 @@ struct TableStruct_Address_2eproto {
   static const uint32_t offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Address_2eproto;
+namespace Joker {
 class Address;
 struct AddressDefaultTypeInternal;
 extern AddressDefaultTypeInternal _Address_default_instance_;
+}  // namespace Joker
 PROTOBUF_NAMESPACE_OPEN
-template<> ::Address* Arena::CreateMaybeMessage<::Address>(Arena*);
+template<> ::Joker::Address* Arena::CreateMaybeMessage<::Joker::Address>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
+namespace Joker {
 
 // ===================================================================
 
 class Address final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Address) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Joker.Address) */ {
  public:
   inline Address() : Address(nullptr) {}
   ~Address() override;
@@ -157,7 +160,7 @@ class Address final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Address";
+    return "Joker.Address";
   }
   protected:
   explicit Address(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -200,7 +203,7 @@ class Address final :
   void _internal_set_num(int32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:Address)
+  // @@protoc_insertion_point(class_scope:Joker.Address)
  private:
   class _Internal;
 
@@ -234,7 +237,7 @@ inline int32_t Address::_internal_num() const {
   return _impl_.num_;
 }
 inline int32_t Address::num() const {
-  // @@protoc_insertion_point(field_get:Address.num)
+  // @@protoc_insertion_point(field_get:Joker.Address.num)
   return _internal_num();
 }
 inline void Address::_internal_set_num(int32_t value) {
@@ -243,7 +246,7 @@ inline void Address::_internal_set_num(int32_t value) {
 }
 inline void Address::set_num(int32_t value) {
   _internal_set_num(value);
-  // @@protoc_insertion_point(field_set:Address.num)
+  // @@protoc_insertion_point(field_set:Joker.Address.num)
 }
 
 // bytes addr = 2;
@@ -251,7 +254,7 @@ inline void Address::clear_addr() {
   _impl_.addr_.ClearToEmpty();
 }
 inline const std::string& Address::addr() const {
-  // @@protoc_insertion_point(field_get:Address.addr)
+  // @@protoc_insertion_point(field_get:Joker.Address.addr)
   return _internal_addr();
 }
 template <typename ArgT0, typename... ArgT>
@@ -259,11 +262,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void Address::set_addr(ArgT0&& arg0, ArgT... args) {
  
  _impl_.addr_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:Address.addr)
+  // @@protoc_insertion_point(field_set:Joker.Address.addr)
 }
 inline std::string* Address::mutable_addr() {
   std::string* _s = _internal_mutable_addr();
-  // @@protoc_insertion_point(field_mutable:Address.addr)
+  // @@protoc_insertion_point(field_mutable:Joker.Address.addr)
   return _s;
 }
 inline const std::string& Address::_internal_addr() const {
@@ -278,7 +281,7 @@ inline std::string* Address::_internal_mutable_addr() {
   return _impl_.addr_.Mutable(GetArenaForAllocation());
 }
 inline std::string* Address::release_addr() {
-  // @@protoc_insertion_point(field_release:Address.addr)
+  // @@protoc_insertion_point(field_release:Joker.Address.addr)
   return _impl_.addr_.Release();
 }
 inline void Address::set_allocated_addr(std::string* addr) {
@@ -293,7 +296,7 @@ inline void Address::set_allocated_addr(std::string* addr) {
     _impl_.addr_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:Address.addr)
+  // @@protoc_insertion_point(field_set_allocated:Joker.Address.addr)
 }
 
 #ifdef __GNUC__
@@ -302,6 +305,7 @@ inline void Address::set_allocated_addr(std::string* addr) {
 
 // @@protoc_insertion_point(namespace_scope)
 
+}  // namespace Joker
 
 // @@protoc_insertion_point(global_scope)
 

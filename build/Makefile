@@ -114,6 +114,30 @@ test/fast:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+Address.pb.o: Address.pb.cc.o
+.PHONY : Address.pb.o
+
+# target to build an object file
+Address.pb.cc.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Address.pb.cc.o
+.PHONY : Address.pb.cc.o
+
+Address.pb.i: Address.pb.cc.i
+.PHONY : Address.pb.i
+
+# target to preprocess a source file
+Address.pb.cc.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Address.pb.cc.i
+.PHONY : Address.pb.cc.i
+
+Address.pb.s: Address.pb.cc.s
+.PHONY : Address.pb.s
+
+# target to generate assembly for a file
+Address.pb.cc.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Address.pb.cc.s
+.PHONY : Address.pb.cc.s
+
 MyTest.o: MyTest.cpp.o
 .PHONY : MyTest.o
 
@@ -195,6 +219,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... Address.pb.o"
+	@echo "... Address.pb.i"
+	@echo "... Address.pb.s"
 	@echo "... MyTest.o"
 	@echo "... MyTest.i"
 	@echo "... MyTest.s"
