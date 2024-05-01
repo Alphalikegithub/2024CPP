@@ -1,0 +1,3 @@
+g++ MyTest.cpp Person.pb.cc main.cpp -o test -lprotobuf -std=c++11 -lpthread
+
+千万别忘了在编译时加上 -lprotobuf -std=c++11 -lpthread
