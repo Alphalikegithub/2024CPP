@@ -17,6 +17,8 @@ void MyTest::test(){
     p.mutable_addr()->set_addr("东郊镇泰山村安置区");
     p.mutable_addr()->set_num(1705);
 
+    p.set_color(Color::Blue);
+
      //序列化对象p,最终得到一个字符串
      std::string output;
      p.SerializeToString(&output);
@@ -34,6 +36,6 @@ void MyTest::test(){
      {
         std::cout << pp.name(i) << std::endl;
      }
-     
+     std::cout << pp.color() << std::endl;
 
 }

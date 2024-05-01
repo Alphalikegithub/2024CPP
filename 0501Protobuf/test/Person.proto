@@ -1,5 +1,13 @@
 syntax = "proto3";
 
+//定义一个颜色相关的枚举
+enum Color{
+    Red = 0;//第一个枚举必须要指定为0
+    Green = 5;
+    Yellow = 6;
+    Blue = 9;
+}
+
 message Address
 {
     int32 num = 1;
@@ -12,4 +20,5 @@ message Person
     bytes sex = 3;
     int32 age = 4;
     Address addr = 5;
+    Color color = 6;
 }

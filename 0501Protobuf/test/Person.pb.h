@@ -29,6 +29,7 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/generated_enum_reflection.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -55,6 +56,33 @@ template<> ::Address* Arena::CreateMaybeMessage<::Address>(Arena*);
 template<> ::Person* Arena::CreateMaybeMessage<::Person>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 
+enum Color : int {
+  Red = 0,
+  Green = 5,
+  Yellow = 6,
+  Blue = 9,
+  Color_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::min(),
+  Color_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<int32_t>::max()
+};
+bool Color_IsValid(int value);
+constexpr Color Color_MIN = Red;
+constexpr Color Color_MAX = Blue;
+constexpr int Color_ARRAYSIZE = Color_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* Color_descriptor();
+template<typename T>
+inline const std::string& Color_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, Color>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function Color_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    Color_descriptor(), enum_t_value);
+}
+inline bool Color_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, Color* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<Color>(
+    Color_descriptor(), name, value);
+}
 // ===================================================================
 
 class Address final :
@@ -347,6 +375,7 @@ class Person final :
     kAddrFieldNumber = 5,
     kIdFieldNumber = 1,
     kAgeFieldNumber = 4,
+    kColorFieldNumber = 6,
   };
   // repeated bytes name = 2;
   int name_size() const;
@@ -422,6 +451,15 @@ class Person final :
   void _internal_set_age(int32_t value);
   public:
 
+  // .Color color = 6;
+  void clear_color();
+  ::Color color() const;
+  void set_color(::Color value);
+  private:
+  ::Color _internal_color() const;
+  void _internal_set_color(::Color value);
+  public:
+
   // @@protoc_insertion_point(class_scope:Person)
  private:
   class _Internal;
@@ -435,6 +473,7 @@ class Person final :
     ::Address* addr_;
     int32_t id_;
     int32_t age_;
+    int color_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -780,6 +819,26 @@ inline void Person::set_allocated_addr(::Address* addr) {
   // @@protoc_insertion_point(field_set_allocated:Person.addr)
 }
 
+// .Color color = 6;
+inline void Person::clear_color() {
+  _impl_.color_ = 0;
+}
+inline ::Color Person::_internal_color() const {
+  return static_cast< ::Color >(_impl_.color_);
+}
+inline ::Color Person::color() const {
+  // @@protoc_insertion_point(field_get:Person.color)
+  return _internal_color();
+}
+inline void Person::_internal_set_color(::Color value) {
+  
+  _impl_.color_ = value;
+}
+inline void Person::set_color(::Color value) {
+  _internal_set_color(value);
+  // @@protoc_insertion_point(field_set:Person.color)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
@@ -788,6 +847,16 @@ inline void Person::set_allocated_addr(::Address* addr) {
 
 // @@protoc_insertion_point(namespace_scope)
 
+
+PROTOBUF_NAMESPACE_OPEN
+
+template <> struct is_proto_enum< ::Color> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::Color>() {
+  return ::Color_descriptor();
+}
+
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
 
