@@ -1,3 +1,0 @@
-/root/code/2024CPP/0502CMake/build/CMakeFiles/rebuild_cache.dir
-/root/code/2024CPP/0502CMake/build/CMakeFiles/edit_cache.dir
-/root/code/2024CPP/0502CMake/build/CMakeFiles/app.dir
