@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "head.h"
+#include "../include/head.h"
 
 const char* libVersion = "Library Version 1.0";
 

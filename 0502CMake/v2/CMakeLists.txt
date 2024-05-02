@@ -1,11 +1,12 @@
-cmake_minimum_required(VERSION 3.21)
-project(test)
-#set(SRC add.cpp sub.cpp multi.cpp div.cpp main.cpp)
-#第一种搜索文件路径的方式
-aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC)
-#第二种搜索文件路径的方式（递归搜索）
-file(GLOB SRC ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
+cmake_minimum_required(VERSION 3.0)
+project(CALC)
 include_directories(${PROJECT_SOURCE_DIR}/include)
-set(EXECUTABLE_OUTPUT_PATH /root/code/2024CPP/0502CMake/v1/aa/bb/cc)
+#file(GLOB SRC_LIST "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp")
+file(GLOB SRC_LIST ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 set(CMAKE_CXX_STANDARD 11)
-add_executable(pp ${SRC})
+# 设置动态库生成路径
+#set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+# add_library(calc SHARED ${SRC_LIST})
+add_library(calc STATIC ${SRC_LIST})
+set(LIBRARY_OUTPUT_PATH /root/code/2024CPP/0502CMake/v2/libary)
+
