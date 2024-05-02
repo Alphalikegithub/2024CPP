@@ -1,7 +1,7 @@
 CMakeFiles/test.dir/Person.pb.cc.o: \
- /root/code/2024CPP/0501Protobuf/test/Person.pb.cc \
+ /root/code/2024CPP/0501Protobuf/normal/Person.pb.cc \
  /usr/include/stdc-predef.h \
- /root/code/2024CPP/0501Protobuf/test/Person.pb.h \
+ /root/code/2024CPP/0501Protobuf/normal/Person.pb.h \
  /usr/include/c++/4.8.2/limits \
  /usr/include/c++/4.8.2/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
@@ -211,6 +211,5 @@ CMakeFiles/test.dir/Person.pb.cc.o: \
  /usr/local/include/google/protobuf/map_type_handler.h \
  /usr/local/include/google/protobuf/extension_set.h \
  /usr/include/c++/4.8.2/cassert \
- /root/code/2024CPP/0501Protobuf/test/Address.pb.h \
  /usr/local/include/google/protobuf/reflection_ops.h \
  /usr/local/include/google/protobuf/wire_format.h

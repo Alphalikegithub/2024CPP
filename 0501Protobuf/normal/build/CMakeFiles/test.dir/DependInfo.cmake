@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/root/code/2024CPP/0501Protobuf/test/MyTest.cpp" "CMakeFiles/test.dir/MyTest.cpp.o" "gcc" "CMakeFiles/test.dir/MyTest.cpp.o.d"
-  "/root/code/2024CPP/0501Protobuf/test/Person.pb.cc" "CMakeFiles/test.dir/Person.pb.cc.o" "gcc" "CMakeFiles/test.dir/Person.pb.cc.o.d"
-  "/root/code/2024CPP/0501Protobuf/test/main.cpp" "CMakeFiles/test.dir/main.cpp.o" "gcc" "CMakeFiles/test.dir/main.cpp.o.d"
+  "/root/code/2024CPP/0501Protobuf/normal/MyTest.cpp" "CMakeFiles/test.dir/MyTest.cpp.o" "gcc" "CMakeFiles/test.dir/MyTest.cpp.o.d"
+  "/root/code/2024CPP/0501Protobuf/normal/Person.pb.cc" "CMakeFiles/test.dir/Person.pb.cc.o" "gcc" "CMakeFiles/test.dir/Person.pb.cc.o.d"
+  "/root/code/2024CPP/0501Protobuf/normal/main.cpp" "CMakeFiles/test.dir/main.cpp.o" "gcc" "CMakeFiles/test.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links.

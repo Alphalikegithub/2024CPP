@@ -1,7 +1,8 @@
 CMakeFiles/test.dir/MyTest.cpp.o: \
- /root/code/2024CPP/0501Protobuf/test/MyTest.cpp \
- /usr/include/stdc-predef.h /root/code/2024CPP/0501Protobuf/test/MyTest.h \
- /root/code/2024CPP/0501Protobuf/test/Person.pb.h \
+ /root/code/2024CPP/0501Protobuf/normal/MyTest.cpp \
+ /usr/include/stdc-predef.h \
+ /root/code/2024CPP/0501Protobuf/normal/MyTest.h \
+ /root/code/2024CPP/0501Protobuf/normal/Person.pb.h \
  /usr/include/c++/4.8.2/limits \
  /usr/include/c++/4.8.2/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
@@ -210,5 +211,4 @@ CMakeFiles/test.dir/MyTest.cpp.o: \
  /usr/local/include/google/protobuf/map.h \
  /usr/local/include/google/protobuf/map_type_handler.h \
  /usr/local/include/google/protobuf/extension_set.h \
- /usr/include/c++/4.8.2/cassert \
- /root/code/2024CPP/0501Protobuf/test/Address.pb.h
+ /usr/include/c++/4.8.2/cassert

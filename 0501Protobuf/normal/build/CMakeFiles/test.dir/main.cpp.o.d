@@ -1,8 +1,8 @@
 CMakeFiles/test.dir/main.cpp.o: \
- /root/code/2024CPP/0501Protobuf/test/main.cpp /usr/include/stdc-predef.h \
- /usr/include/stdio.h /usr/include/features.h /usr/include/sys/cdefs.h \
- /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
- /usr/include/gnu/stubs-64.h \
+ /root/code/2024CPP/0501Protobuf/normal/main.cpp \
+ /usr/include/stdc-predef.h /usr/include/stdio.h /usr/include/features.h \
+ /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
+ /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include/stddef.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
@@ -19,4 +19,4 @@ CMakeFiles/test.dir/main.cpp.o: \
  /usr/include/bits/sigset.h /usr/include/bits/time.h \
  /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
  /usr/include/alloca.h /usr/include/bits/stdlib-float.h \
- /root/code/2024CPP/0501Protobuf/test/MyTest.h
+ /root/code/2024CPP/0501Protobuf/normal/MyTest.h
