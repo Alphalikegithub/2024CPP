@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/app.dir/main.cpp.o -o app   -L/root/code/2024CPP/0502CMake/v4/lib2  -Wl,-rpath,/root/code/2024CPP/0502CMake/v4/lib2 -lcalc 
