@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/pp.dir/src/add.cpp.o CMakeFiles/pp.dir/src/div.cpp.o CMakeFiles/pp.dir/src/main.cpp.o CMakeFiles/pp.dir/src/multi.cpp.o CMakeFiles/pp.dir/src/sub.cpp.o -o ../aa/bb/cc/pp 

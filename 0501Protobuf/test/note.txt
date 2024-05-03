@@ -1,0 +1,22 @@
+创建一个新的文件, 文件名随意指定, 文件后缀为 .proto
+
+根据protobuf的语法, 编辑.proto文件
+
+使用 protoc 命令将 .proto 文件转化为相应的 C++ 文件
+
+源文件: xxx.pb.cc –> xxx对应的名字和 .proto文件名相同
+头文件: xxx.pb.h –> xxx对应的名字和 .proto文件名相同
+需要将生成的c++文件添加到项目中, 通过文件中提供的类 API 实现数据的序列化/反序列化
+
+$ protoc -I path .proto文件 --cpp_out=输出路径(存储生成的c++文件)
+示例：
+$ protoc ./Person.proto --cpp_out=.
+# 或者使用 -I 参数
+$ protoc -I ./ Person.proto --cpp_out=.
+
+
+
+
+g++ MyTest.cpp Person.pb.cc main.cpp -o test -lprotobuf -std=c++11 -lpthread
+
+千万别忘了在编译时加上 -lprotobuf -std=c++11 -lpthread
