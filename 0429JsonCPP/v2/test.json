@@ -1,0 +1,11 @@
+[
+   "luffy",
+   19,
+   170,
+   false,
+   [ "ace", "sabo" ],
+   {
+      "girlfriend" : "Hancock",
+      "sex" : "man"
+   }
+]
