@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/calc.h
+
+/home/zhenxi/QT_PROJECT/demo/calc/add.cpp
+stdio.h
+-
+calc.h
+/home/zhenxi/QT_PROJECT/demo/calc/calc.h
+
+/home/zhenxi/QT_PROJECT/demo/calc/div.cpp
+stdio.h
+-
+calc.h
+/home/zhenxi/QT_PROJECT/demo/calc/calc.h
+
+/home/zhenxi/QT_PROJECT/demo/calc/muit.cpp
+stdio.h
+-
+calc.h
+/home/zhenxi/QT_PROJECT/demo/calc/calc.h
+
+/home/zhenxi/QT_PROJECT/demo/calc/sub.cpp
+stdio.h
+-
+calc.h
+/home/zhenxi/QT_PROJECT/demo/calc/calc.h
+

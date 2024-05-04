@@ -1,0 +1,14 @@
+/home/zhenxi/QT_PROJECT/demo/build/CMakeFiles/rebuild_cache.dir
+/home/zhenxi/QT_PROJECT/demo/build/CMakeFiles/edit_cache.dir
+/home/zhenxi/QT_PROJECT/demo/build/calc/CMakeFiles/rebuild_cache.dir
+/home/zhenxi/QT_PROJECT/demo/build/calc/CMakeFiles/edit_cache.dir
+/home/zhenxi/QT_PROJECT/demo/build/calc/CMakeFiles/calc.dir
+/home/zhenxi/QT_PROJECT/demo/build/sort/CMakeFiles/rebuild_cache.dir
+/home/zhenxi/QT_PROJECT/demo/build/sort/CMakeFiles/edit_cache.dir
+/home/zhenxi/QT_PROJECT/demo/build/sort/CMakeFiles/sort.dir
+/home/zhenxi/QT_PROJECT/demo/build/test1/CMakeFiles/rebuild_cache.dir
+/home/zhenxi/QT_PROJECT/demo/build/test1/CMakeFiles/edit_cache.dir
+/home/zhenxi/QT_PROJECT/demo/build/test1/CMakeFiles/app1.dir
+/home/zhenxi/QT_PROJECT/demo/build/test2/CMakeFiles/rebuild_cache.dir
+/home/zhenxi/QT_PROJECT/demo/build/test2/CMakeFiles/edit_cache.dir
+/home/zhenxi/QT_PROJECT/demo/build/test2/CMakeFiles/app2.dir

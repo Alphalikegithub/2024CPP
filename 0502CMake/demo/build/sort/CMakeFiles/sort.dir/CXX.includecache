@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/sort.h
+
+/home/zhenxi/QT_PROJECT/demo/sort/insert.cpp
+stdio.h
+-
+sort.h
+/home/zhenxi/QT_PROJECT/demo/sort/sort.h
+
+/home/zhenxi/QT_PROJECT/demo/sort/select.cpp
+stdio.h
+-
+sort.h
+/home/zhenxi/QT_PROJECT/demo/sort/sort.h
+

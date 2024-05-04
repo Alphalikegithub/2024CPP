@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/app1.dir/calc.cpp.o  -o ../../bin/app1   -L/home/zhenxi/QT_PROJECT/demo/lib  -Wl,-rpath,/home/zhenxi/QT_PROJECT/demo/lib ../../lib/libcalc.a 

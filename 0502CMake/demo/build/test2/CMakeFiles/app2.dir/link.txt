@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/app2.dir/sort.cpp.o  -o ../../bin/app2   -L/home/zhenxi/QT_PROJECT/demo/lib  -Wl,-rpath,/home/zhenxi/QT_PROJECT/demo/lib ../../lib/libsort.so 
