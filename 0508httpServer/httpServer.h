@@ -43,7 +43,7 @@ public:
         //发送火车头
         std::string firstLine = "HTTP/1.1 200 OK\r\n";
         send(netFd,firstLine.c_str(),firstLine.size(),0);
-        std::string headers = "Content-Type:test/plain\r\n"
+        std::string headers = "Content-Type:text/plain\r\n"
                               "Content-Length:5\r\n";
         send(netFd,headers.c_str(),headers.size(),0);
         std::string emptyLine = "\r\n";
