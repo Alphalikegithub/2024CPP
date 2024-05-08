@@ -22,7 +22,7 @@
 #include <syslog.h>
 #include <pthread.h>
 #include <shadow.h>
-#include <openssl/md5.h>
+//#include <openssl/md5.h>
 #include <arpa/inet.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
