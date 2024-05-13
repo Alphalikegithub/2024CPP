@@ -1,0 +1,54 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include "fileIO3.h"
+
+using std::cout;
+using std::endl;
+using std::cin;
+using std::ifstream;
+using std::cerr;
+using std::string;
+using std::ofstream;
+using std::fstream;
+
+
+void test1(){
+    //文件输入输出流
+    /* 对于文件的输入输出流而言，当文件不存在的时候，就打开失败 */
+    ifstream ifs("test.txt",std::ios::in | std::ios::ate);
+    if(!ifs.good()){
+        cerr << "ifstream is not good!" << endl;
+        return;
+    }
+    
+    cout << "ifs.tellg() = " << ifs.tellg() <<endl;
+    
+
+    ifs.close();
+}
+
+void test2(){
+    //文件输入输出流
+    /* 对于文件的输入输出流而言，当文件不存在的时候，就打开失败 */
+    ofstream ofs("test.txt",std::ios::out | std::ios::app);
+    if(!ofs.good()){
+        cerr << "ofstream is not good!" << endl;
+        return;
+    }
+    
+    cout << "ofs.tellp() = " << ofs.tellp() <<endl;
+
+    //追加字符 
+    ofs << "hello my love" << endl;
+    cout << "ofs.tellp() = " << ofs.tellp() <<endl;
+
+    ofs.close();
+}
+
+
+
+int main(int argc,char **aggv){
+    test2();
+    return 0;
+}
