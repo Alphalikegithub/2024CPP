@@ -41,7 +41,9 @@
         "type_traits": "cpp",
         "utility": "cpp",
         "typeinfo": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "strstream": "cpp",
+        "cinttypes": "cpp"
     },
     "cmake.sourceDirectory": "/root/code/2024CPP/0501Protobuf/test"
 }
