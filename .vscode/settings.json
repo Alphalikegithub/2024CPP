@@ -45,7 +45,9 @@
         "strstream": "cpp",
         "cinttypes": "cpp",
         "complex": "cpp",
-        "pthread.h": "c"
+        "pthread.h": "c",
+        "threadpool.h": "c",
+        "stdio.h": "c"
     },
     "cmake.sourceDirectory": "/root/code/2024CPP/0501Protobuf/test"
 }
