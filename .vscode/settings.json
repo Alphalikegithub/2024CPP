@@ -47,7 +47,8 @@
         "complex": "cpp",
         "pthread.h": "c",
         "threadpool.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "taskqueue.h": "c"
     },
     "cmake.sourceDirectory": "/root/code/2024CPP/0501Protobuf/test"
 }
