@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/MyProject.dir/main.cpp.o CMakeFiles/MyProject.dir/ConnectionPool.cpp.o CMakeFiles/MyProject.dir/MysqlConnect.cpp.o CMakeFiles/MyProject.dir/jsoncpp/jsoncpp.cpp.o -o MyProject   -L/www/server/mysql/lib  -Wl,-rpath,/www/server/mysql/lib -lpthread -lmysqlclient 

@@ -1,3 +1,0 @@
-/root/code/2024CPP/0516Mysql_C++/v2_thread/build/CMakeFiles/rebuild_cache.dir
-/root/code/2024CPP/0516Mysql_C++/v2_thread/build/CMakeFiles/edit_cache.dir
-/root/code/2024CPP/0516Mysql_C++/v2_thread/build/CMakeFiles/MyProject.dir
