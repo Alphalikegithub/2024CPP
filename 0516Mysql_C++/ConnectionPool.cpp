@@ -69,6 +69,8 @@ void ConnectionPool::recycleConnection()
     while(true){
         //休眠一定的时长
         std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        //由locker对象来维护互斥锁的加锁和解锁操作
+        std::unique_lock<std::mutex> locker(m_mutexQ);
         while(m_connectionQ.size() > m_minsize){
             MysqlConnect* conn = m_connectionQ.front();
             if(conn->getAliveTime() >= m_maxIdleTime){
@@ -90,6 +92,15 @@ void ConnectionPool::addConnection()
     conn->refreshAliveTime();
     //入队
     m_connectionQ.push(conn);
+}
+
+ConnectionPool::~ConnectionPool()
+{
+    if(!m_connectionQ.empty()){
+        MysqlConnect* conn = m_connectionQ.front();
+        m_connectionQ.pop();
+        delete conn;
+    }
 }
 
 ConnectionPool *ConnectionPool::getConnectionPool()

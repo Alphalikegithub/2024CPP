@@ -26,7 +26,7 @@ private:
     //添加连接
     void addConnection();
 public:
-    
+    ~ConnectionPool();
     //拷贝构造函数设置为private或=delete
     ConnectionPool(const ConnectionPool& rhs) = delete;
     //移动赋值操作符重载
