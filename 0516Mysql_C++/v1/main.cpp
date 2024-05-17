@@ -13,7 +13,8 @@ int query(){
     //string sql = "insert into person values(5,24,'man','david')";
     //string sql = "insert into person values(6,25,'woman','lisa')";
     //string sql = "insert into person values(7,26,'man','baoqiang')";
-    string sql = "insert into person values(8,27,'man','xiaoniao')";
+    //string sql = "insert into person values(8,27,'man','xiaoniao')";
+    string sql = "insert into person values(9,28,'woman','xiaosb')";
     bool flag = conn.update(sql);
     cout << "flag value:" << flag << endl;
 
