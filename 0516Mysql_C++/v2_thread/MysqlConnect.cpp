@@ -4,6 +4,7 @@
 MysqlConnect::MysqlConnect()
 {
     m_conn = mysql_init(nullptr);
+    mysql_set_character_set(m_conn, "utf8mb4");
 }
 
 MysqlConnect::~MysqlConnect()

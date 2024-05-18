@@ -51,8 +51,8 @@ public:
 private:
     void freeResult();
 
-    MYSQL *m_conn = nullptr;
-    MYSQL_RES *m_result = nullptr;
+    MYSQL* m_conn = nullptr;
+    MYSQL_RES* m_result = nullptr;
     MYSQL_ROW m_row = nullptr;//指向结果集中的数据
     std::chrono::steady_clock::time_point m_aliveTime;
     /* 

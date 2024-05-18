@@ -36,9 +36,14 @@ public:
     static ConnectionPool*  getConnectionPool(); 
     //获取连接的函数
     std::shared_ptr<MysqlConnect> getConnection();  
-
+    //添加一个退出条件
+    void stopRecycling() {
+        m_stopRecycling = true;
+    }
 
 private:
+    //使用一个标志来控制循环的终止
+    bool m_stopRecycling = false; // Add this member variable
     queue<MysqlConnect*> m_connectionQ;
 
     string m_ip;
