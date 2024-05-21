@@ -50,7 +50,8 @@
         "stdio.h": "c",
         "taskqueue.h": "c",
         "condition_variable": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "hiredis.h": "c"
     },
     "cmake.sourceDirectory": "/root/code/2024CPP/0501Protobuf/test"
 }

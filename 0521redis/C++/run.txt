@@ -1,0 +1,5 @@
+g++ TestRedis.cc -o test -I /usr/local/include/hiredis -lhiredis
+
+or
+
+g++ TestRedis.cc -o test -lhiredis

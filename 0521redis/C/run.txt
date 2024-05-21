@@ -1,0 +1,5 @@
+gcc testRedis.c  -o test -lhiredis
+
+or
+
+gcc testRedis.c  -o test -I /usr/local/include/hiredis -lhiredis
