@@ -52,7 +52,8 @@
         "condition_variable": "cpp",
         "thread": "cpp",
         "hiredis.h": "c",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "stdlib.h": "c"
     },
     "cmake.sourceDirectory": "/root/code/2024CPP/0501Protobuf/test"
 }
