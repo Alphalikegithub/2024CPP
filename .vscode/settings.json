@@ -53,7 +53,22 @@
         "thread": "cpp",
         "hiredis.h": "c",
         "algorithm": "cpp",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "bit": "cpp",
+        "compare": "cpp",
+        "concepts": "cpp",
+        "cstddef": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "iterator": "cpp",
+        "memory": "cpp",
+        "memory_resource": "cpp",
+        "random": "cpp",
+        "string_view": "cpp",
+        "numbers": "cpp",
+        "semaphore": "cpp",
+        "stop_token": "cpp"
     },
     "cmake.sourceDirectory": "/root/code/2024CPP/0501Protobuf/test"
 }
