@@ -102,9 +102,9 @@ GeocentricCoordinates applyRotationAndTranslation(const GeocentricCoordinates& l
 int main() {
     // 无人机的经纬度和高程
     GeodeticCoordinates dronePosition = {121.5065, 31.24396, 10.0535};
-    double yaw = 45.0; // 无人机的航向角，单位：度
+    double yaw = 0; // 无人机的航向角，单位：度
 
-#if 1
+#if 0
     // 靶板在无人机局部坐标系中的偏移量（假设为右侧下方50厘米）
     GeocentricCoordinates localOffset = {0.5, 0, -0.5}; // x 向右，y 向前，z 向下
     // 将无人机的位置转换为空间直角坐标
@@ -124,7 +124,7 @@ int main() {
     std::cout << "高程: " << targetPosition.h << "米" << std::endl;
 #endif
 
-#if 0
+#if 1
 GeocentricCoordinates geocentric = geodeticToGeocentric(dronePosition);
     std::cout << "地心笛卡尔空间直角坐标系:" << std::endl;
     std::cout << std::fixed << std::setprecision(10);
