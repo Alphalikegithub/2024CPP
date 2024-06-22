@@ -68,7 +68,9 @@
         "string_view": "cpp",
         "numbers": "cpp",
         "semaphore": "cpp",
-        "stop_token": "cpp"
+        "stop_token": "cpp",
+        "socket.h": "c",
+        "inet.h": "c"
     },
     "cmake.sourceDirectory": "/root/code/2024CPP/0501Protobuf/test"
 }
