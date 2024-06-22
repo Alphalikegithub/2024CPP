@@ -15,3 +15,11 @@ void initSockaddr(struct sockaddr* addr,unsigned short port,const char* ip);
 int setListen(int lfd,unsigned short port);
 //阻塞等待客户端连接
 int acceptConnect(int lfd, struct sockaddr* addr);
+
+//客户端连接到服务器
+void connectToHost(int fd,unsigned short port,const char* ip);//fd客户端通信套接字
+
+//读取数据
+int readn(int fd,char* buffer,int size);
+//写入数据
+int writen(int fd,const char* buffer,int length);
