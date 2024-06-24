@@ -36,5 +36,5 @@ int writen(int fd,const char* buffer,int length);
 
 bool sendMessage(int fd,const char* buffer,int length,enum Type t);
 //char** buffer 指向一级指针的char* buffer地址
-//enum Type* t 指向数据类型变量的地址
+//enum Type* t 指向枚举类型变量的地址
 int readMesssge(int fd,char** buffer,enum Type* t);
