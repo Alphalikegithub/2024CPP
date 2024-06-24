@@ -127,3 +127,55 @@ int writen(int fd,const char *buffer, int length)//此时写缓冲区必须要�
     }
     return length;
 }
+
+bool sendMessage(int fd, const char *buffer, int length, enum Type t)
+{
+    //待发送的数据占用的存储空间有多大呢？
+    //dataLen = length(数据长度) + 1(enum Type类型占用1字节) + sizeof(int) (4字节的数据头)
+    int dataLen = length + 1 + sizeof(int);
+    //申请堆内存
+    char* data  = (char*)malloc(dataLen);
+    if(data == NULL){
+        return false;
+    }
+    //在发送数据是需要转换为网络字节序
+    int netlen = htonl(length + 1);
+    memcpy(data,&netlen,sizeof(int));
+    char* ch = t == Heart ? 'H' : 'M' ;
+    memcpy(data + sizeof(int),ch,sizeof(char));//data + sizeof(int)是为了让指针向后偏移sizeof(int)个字节
+    //data + sizeof(int) + 1此时+1是指，让指针向后偏移enum Type个字节，从而让指针指向数据缓冲区
+    memcpy(data + sizeof(int) + 1,buffer,length);
+
+    int ret = writen(fd,data,dataLen);
+    free(data);
+    return ret == dataLen;
+}
+
+int readMesssge(int fd, char **buffer, enum Type *t)
+{
+    int dataLen = 0;
+    int ret = readn(fd,(char*)&dataLen,sizeof(int));
+    if(ret == -1)
+    {
+        *buffer = NULL;
+        return -1;
+    }
+    dataLen = ntohl(dataLen);
+    char ch ;
+    readn(fd,&ch,1);
+    *t = ch == 'H' ? Heart : Message;
+    char* tempbuf = (char*)calloc(dataLen,sizeof(char));//为enum Type类型申请空间
+    if(tempbuf == NULL)
+    {
+        *buffer = NULL;
+        return -1;
+    }
+    ret = readn(fd,tempbuf,dataLen -1);//这里-1是要去掉enum Type占用的字节数
+    if(ret != dataLen -1){
+        free(tempbuf);
+        *buffer = NULL;
+        return -1;
+    }
+    *buffer = tempbuf;
+    return ret;
+}
