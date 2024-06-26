@@ -25,7 +25,7 @@ int setListen(int lfd,unsigned short port);
 int acceptConnect(int lfd, struct sockaddr* addr);
 
 //客户端连接到服务器
-void connectToHost(int fd,unsigned short port,const char* ip);//fd客户端通信套接字
+int connectToHost(int fd,unsigned short port,const char* ip);//fd客户端通信套接字
 
 //读取数据
 int readn(int fd,char* buffer,int size);
@@ -37,4 +37,4 @@ int writen(int fd,const char* buffer,int length);
 bool sendMessage(int fd,const char* buffer,int length,enum Type t);
 //char** buffer 指向一级指针的char* buffer地址
 //enum Type* t 指向枚举类型变量的地址
-int readMesssge(int fd,char** buffer,enum Type* t);
+int recvMesssage(int fd,char** buffer,enum Type* t);

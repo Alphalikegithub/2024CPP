@@ -1,0 +1,4 @@
+lpthread客户端编译命令：
+gcc client.c socket.c  -o client -lpthread
+服务端编译命令：
+gcc server.c socket.c clientList.c -o server -lpthread

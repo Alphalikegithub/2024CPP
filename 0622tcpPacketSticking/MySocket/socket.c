@@ -1,6 +1,9 @@
 #include "socket.h"
 #include <stdio.h>
 #include <errno.h>
+#include <string.h>//memcpy()的头文件
+#include <stdlib.h>//free()的头文件
+#include <unistd.h>
 
 int initSocket()
 {
@@ -32,14 +35,14 @@ int setListen(int lfd, unsigned short port)
     setsockopt(lfd,SOL_SOCKET,SO_REUSEADDR,&opt,sizeof(opt));
     //先绑定后监听
     //绑定端口号
-    int ret = bind(lfd,&addr,sizeof(addr));
-    if(ret == -1){
+    int ret1 = bind(lfd,&addr,sizeof(addr));
+    if(ret1 == -1){
         perror("bind");
         return -1;
     }
     //设置监听
-    int ret = listen(lfd,128);
-    if(ret == -1){
+    int ret2 = listen(lfd,128);
+    if(ret2 == -1){
         perror("ret");
         return -1;
     }
@@ -66,7 +69,7 @@ int acceptConnect(int lfd,struct sockaddr *addr)
     
 }
 
-void connectToHost(int fd, unsigned short port, const char *ip)
+int connectToHost(int fd, unsigned short port, const char *ip)
 {
     //声明/创建结构体
     struct sockaddr addr;
@@ -85,12 +88,17 @@ int readn(int fd, char *buffer, int size)
     int left = size;
     int readBytes = 0;
     char* ptr = buffer;
-    while(left){
+    while(left)
+    {
         readBytes = read(fd,ptr,left);
-        if(readBytes == -1){
-            if(errno == EINTR){
+        if(readBytes == -1)
+        {
+            if(errno == EINTR)
+            {
                 readBytes = 0;
-            }else{
+            }
+            else
+            {
                 perror("read");
                 return -1;
             }
@@ -141,7 +149,7 @@ bool sendMessage(int fd, const char *buffer, int length, enum Type t)
     //在发送数据是需要转换为网络字节序
     int netlen = htonl(length + 1);
     memcpy(data,&netlen,sizeof(int));
-    char* ch = t == Heart ? 'H' : 'M' ;
+    char* ch = t == Heart ? "H" : "M";
     memcpy(data + sizeof(int),ch,sizeof(char));//data + sizeof(int)是为了让指针向后偏移sizeof(int)个字节
     //data + sizeof(int) + 1此时+1是指，让指针向后偏移enum Type个字节，从而让指针指向数据缓冲区
     memcpy(data + sizeof(int) + 1,buffer,length);
@@ -151,7 +159,7 @@ bool sendMessage(int fd, const char *buffer, int length, enum Type t)
     return ret == dataLen;
 }
 
-int readMesssge(int fd, char **buffer, enum Type *t)
+int recvMesssage(int fd, char **buffer, enum Type *t)
 {
     int dataLen = 0;
     int ret = readn(fd,(char*)&dataLen,sizeof(int));

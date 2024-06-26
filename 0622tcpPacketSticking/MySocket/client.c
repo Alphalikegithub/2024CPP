@@ -1,7 +1,9 @@
 #include <stdio.h>
-#include <socket.h>
 #include <string.h>
 #include <pthread.h>
+#include <stdlib.h>//free()的头文件
+#include <unistd.h>//close()的头文件
+#include "socket.h"
 //添加一把互斥锁
 pthread_mutex_t mutex;
 
@@ -18,7 +20,7 @@ void* parseRecvMessage(void* arg){
     while(1){
         char* buffer;
         enum Type t;
-        int len = readMesssge(info->fd,&buffer,&t);
+        recvMesssage(info->fd,&buffer,&t);
         if(buffer == NULL){
             //如果接收数据失败，可以进行再次的尝试
             continue;
@@ -32,7 +34,7 @@ void* parseRecvMessage(void* arg){
                 info->count = 0;
                 pthread_mutex_unlock(&mutex);
             }
-            if(t == Message)
+            else
             {
                 printf("数据包: %s\n",buffer);
             }
@@ -56,7 +58,7 @@ void* HeratBeat(void* arg)
         {
             //客户端和服务器断开了连接
             printf("客户端和服务器断开了连接...\n");
-            fclose(info->fd);
+            close(info->fd);
             //释放套接字资源，退出客户端程序
             exit(0);
         }
@@ -64,6 +66,7 @@ void* HeratBeat(void* arg)
         sendMessage(info->fd,"hello",5,Heart);
         sleep(3);
     }
+    return NULL;
 }
 
 
@@ -82,11 +85,11 @@ int main(){
     pthread_t pid;
     //创建线程
     //该函数的第二个参数是指线程属性，一般情况下，是不需要设置的，第四个参数要放置回调函数中使用什么参数
-    pthread_create(pid,NULL,parseRecvMessage,&info);
+    pthread_create(&pid,NULL,parseRecvMessage,&info);
 
     //添加心跳包子线程
     pthread_t pid1;
-    pthread_create(pid1,NULL,parseRecvMessage,&info);
+    pthread_create(&pid1,NULL,HeratBeat,&info);
 
     //进行数据通信 应该是一个持久的动作
     while(1){
