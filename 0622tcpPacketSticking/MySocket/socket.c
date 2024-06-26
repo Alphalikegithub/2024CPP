@@ -43,7 +43,7 @@ int setListen(int lfd, unsigned short port)
     //设置监听
     int ret2 = listen(lfd,128);
     if(ret2 == -1){
-        perror("ret");
+        perror("listen");
         return -1;
     }
     
@@ -62,7 +62,7 @@ int acceptConnect(int lfd,struct sockaddr *addr)
     }
 
     if(connfd == -1){
-        perror("accrpt");
+        perror("accept");
         return -1;
     }
     return connfd;

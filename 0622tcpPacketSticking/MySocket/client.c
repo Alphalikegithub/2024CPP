@@ -29,14 +29,14 @@ void* parseRecvMessage(void* arg){
         {
             if(t == Heart)
             {
-                printf("心跳包: %s\n",buffer);
+                printf("心跳包: %s\n", buffer);
                 pthread_mutex_lock(&mutex);
                 info->count = 0;
                 pthread_mutex_unlock(&mutex);
             }
             else
             {
-                printf("数据包: %s\n",buffer);
+                printf("数据包: %s\n", buffer);
             }
             free(buffer);
         }
@@ -54,6 +54,7 @@ void* HeratBeat(void* arg)
     {
         pthread_mutex_lock(&mutex);
         info->count ++;//count = 0的时候，默认没收到服务器回复的心跳包数据
+        printf("fd = %d, count = %d\n", info->fd, info->count);
         if(info->count > 5)
         {
             //客户端和服务器断开了连接
@@ -75,7 +76,7 @@ int main(){
     pthread_mutex_init(&mutex,NULL);
 
     struct FdInfo info;
-    unsigned short port = 8989;
+    unsigned short port = 8987;
     const char* ip = "127.0.0.1";
     info.fd = initSocket();
     info.count = 0;

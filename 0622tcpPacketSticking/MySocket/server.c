@@ -43,7 +43,9 @@ void* parseRecvMessage(void* arg){
             {
                 const char* ptr = "今天中午吃什么？";
                 printf("数据包: %s\n",buffer);
-                sendMessage(info->fd,ptr,strlen(ptr),Heart);
+                //sendMessage(info->fd,ptr,strlen(ptr),Message);
+                /* 注意：不要抄错40行的代码 */
+                sendMessage(info->fd,ptr,strlen(ptr),Message);
             }
             free(buffer);
         }
@@ -87,7 +89,7 @@ void* HeratBeat(void* arg)
 
 int main(){
     //设置监听
-    unsigned short port = 8989;
+    unsigned short port = 8987;
     int lfd = initSocket();
     setListen(lfd,port);
 
@@ -104,13 +106,13 @@ int main(){
     while(1)
     {
         int sockfd = acceptConnect(lfd,NULL);
-        if(sockfd = -1)
+        /* 注意：不要写成sockfd = -1 */
+        if(sockfd == -1)
         {
             continue;
         }
         struct ClientInfo* node = prependNode(head,sockfd);
         //创建接收数据的子线程
-        pthread_t pid;
         //该函数的第二个参数是指线程属性，一般情况下，是不需要设置的，第四个参数要放置回调函数中使用什么参数
         pthread_create(&node->pid,NULL,parseRecvMessage,node);
         //主线程和子线程分离
