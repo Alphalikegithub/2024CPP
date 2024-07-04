@@ -1,4 +1,4 @@
-好的，让我们详细解释一下《Effective C++》第50条：理解何时替换 `new` 和 `delete` 有意义。
+## 《Effective C++》第50条：理解何时替换 `new` 和 `delete` 有意义。
 
 ### 何时考虑替换 `new` 和 `delete`
 
