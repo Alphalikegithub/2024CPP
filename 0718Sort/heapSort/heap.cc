@@ -21,13 +21,13 @@ void heapify(int tree[],int n,int i){
     if(c2 < n && tree[c2] > tree[max]){
         max = c2;
     }
-
+    //说明i 结点还有孩子比i大
     if(max != i){
         swap(tree,max,i);
         heapify(tree,n,max);
     }
 }
-
+//建堆的过程
 void build_heap(int tree[],int n){
     int last_node = n - 1;
     int parent  = (last_node - 1) / 2;
@@ -36,7 +36,7 @@ void build_heap(int tree[],int n){
     }
 }
 //一个大根堆中，根结点的值大于子节点
-
+//排序的过程
 void heap_sort(int tree[],int n){
     build_heap(tree,n);
     for(int i = n - 1; i >= 0; i--){
@@ -55,6 +55,9 @@ int main(){
 
     for(int  i = 0;i < length ;i++){
         std::cout << tree[i] << " ";
+    }
+    for(int  j = 0;j < 100;j++){
+        //大根堆和小根堆的创建过程 孩子结点是父亲节点的二倍 
     }
     std::cout << std::endl;
     return 0;
