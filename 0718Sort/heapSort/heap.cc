@@ -27,14 +27,35 @@ void heapify(int tree[],int n,int i){
         heapify(tree,n,max);
     }
 }
-int main(){
-    int tree[] = {4,10,3,5,1,2};
-    int length = sizeof(tree) / tree[0];
-     heapify(tree,length,0);
 
-     for(int  i = 0;i < length ;i++){
+void build_heap(int tree[],int n){
+    int last_node = n - 1;
+    int parent  = (last_node - 1) / 2;
+    for(int i = parent;i >= 0;i--){
+        heapify(tree,n,i);
+    }
+}
+//一个大根堆中，根结点的值大于子节点
+
+void heap_sort(int tree[],int n){
+    build_heap(tree,n);
+    for(int i = n - 1; i >= 0; i--){
+        swap(tree,i,0);
+        heapify(tree,i,0);//i代表的是当前这个数的结点个数
+    }
+}
+int main(){
+
+    int tree[] = {2,5,3,1,10,4};
+    int length = sizeof(tree) / sizeof(tree[0]);
+    
+    //heapify(tree,length,0);
+    //build_heap(tree,length);
+    heap_sort(tree,length);
+
+    for(int  i = 0;i < length ;i++){
         std::cout << tree[i] << " ";
-     }
-     std::cout << std::endl;
-     return 0;
+    }
+    std::cout << std::endl;
+    return 0;
 }
