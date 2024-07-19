@@ -37,12 +37,19 @@ void build_heap(int tree[],int n){
 }
 //一个大根堆中，根结点的值大于子节点
 //排序的过程
+/**
+ * @brief Sorts an array using the heap sort algorithm.
+ * 
+ * @param tree The array to be sorted.
+ * @param n The number of elements in the array.
+ */
 void heap_sort(int tree[],int n){
     build_heap(tree,n);
     for(int i = n - 1; i >= 0; i--){
         swap(tree,i,0);
         heapify(tree,i,0);//i代表的是当前这个数的结点个数
     }
+    
 }
 int main(){
 
